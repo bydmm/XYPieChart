@@ -68,4 +68,6 @@
 - (void)setSliceSelectedAtIndex:(NSInteger)index;
 - (void)setSliceDeselectedAtIndex:(NSInteger)index;
 
+- (void)clean;
+
 @end;
