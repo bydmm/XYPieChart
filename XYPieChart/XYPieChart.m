@@ -225,6 +225,17 @@ static CGPathRef CGPathCreateArc(CGPoint center, CGFloat radius, CGFloat startAn
 
 #pragma mark - manage settings
 
+-(void)rotateTextToAngle:(CGFloat)angle {
+    
+    CALayer *parentLayer = [_pieView layer];
+    NSArray *slicelayers = [parentLayer sublayers];
+    
+    [slicelayers enumerateObjectsUsingBlock:^(SliceLayer *sliceLayer, NSUInteger idx, BOOL *stop) {
+        CATextLayer *textLayer = sliceLayer.sublayers.firstObject;
+        textLayer.transform = CATransform3DMakeRotation(angle, 0, 0, 1);
+    }];
+}
+
 - (void)setShowPercentage:(BOOL)showPercentage
 {
     _showPercentage = showPercentage;
