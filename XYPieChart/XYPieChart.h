@@ -70,4 +70,6 @@
 
 - (void)clean;
 
+- (void)rotateTextToAngle:(CGFloat)angle;
+
 @end;
