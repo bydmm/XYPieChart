@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "XYPieChart"
-  s.version      = "0.2"
+  s.version      = "0.21"
   s.summary      = "A simple and animated Pie Chart for your iOS app."
 
   s.description  = <<-DESC
